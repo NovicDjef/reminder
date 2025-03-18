@@ -38,7 +38,6 @@ export default function AuthScreen() {
                 cancelLabel: 'Cancel',
                 disableDeviceFallback: false,
                 fallbackLabel: 'Enter PIN',
-                // fallbackAction: LocalAuthentication.FallbackAction.Allow
             });
 
             if (auth.success) {
