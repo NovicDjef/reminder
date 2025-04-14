@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Reminder",
-    "slug": "Reminder",
+    "slug": "reminder",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -36,6 +36,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "57648fc2-90ad-45a2-8fe1-adac855b7272"
+      }
+    },
+    "owner": "novic"
   }
 }
