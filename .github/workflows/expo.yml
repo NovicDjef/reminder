@@ -39,10 +39,10 @@ jobs:
       #     EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
      
-      - name: 🧱 Recreate play-store.json from GitHub Secret
+      - name: 🧱 Decode play-store.json from Base64
         run: |
-           mkdir -p ./keys
-           echo '${{ secrets.PLAY_STORE_JSON }}' > ./keys/play-store.json
+          mkdir -p ./keys
+          echo "${{ secrets.PLAY_STORE_JSON_BASE64 }}" | base64 -d > ./keys/play-store.json
 
       - name: 🚀 Submit Android to Play Store
         run: eas submit --latest --platform android --non-interactive
