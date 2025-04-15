@@ -39,7 +39,7 @@ jobs:
       #     EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🚀 Submit Android to Play Store
-        run: eas submit -p android --profile production --clear-cache
+        run: eas submit -p android --profile production --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
