@@ -23,6 +23,8 @@ import {
   scheduleRefillReminder,
 } from "../../utils/notifications";
 
+// EXPO_TOKEN = dQ6LGLfSPUNNJOkyIIa6_ATeKcuY9Yz4soEJysX-
+
 const { width } = Dimensions.get("window");
 
 const FREQUENCIES = [
