@@ -29,21 +29,28 @@ jobs:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Run EAS Build - Android
-        run: eas build --platform android --profile production --clear-cache
+        run: eas build --platform android --profile production --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       # - name: 📦 Run EAS Build - iOS
-      #   run: eas build --platform ios --profile production --clear-cache
+      #   run: eas build --platform ios --profile production --non-interactive
       #   env:
       #     EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
+     
+      - name: 🧱 Recreate play-store.json from GitHub Secret
+        run: |
+           mkdir -p ./keys
+           echo '${{ secrets.PLAY_STORE_JSON }}' > ./keys/play-store.json
+
       - name: 🚀 Submit Android to Play Store
-        run: eas submit -p android --latest --platform android --non-interactive
+        run: eas submit --latest --platform android --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+     
 
       # - name: 🚀 Submit iOS to TestFlight
-      #   run: eas submit -p ios --profile production --clear-cache
+      #   run: eas submit -p ios --profile production --non-interactive
       #   env:
       #     EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
