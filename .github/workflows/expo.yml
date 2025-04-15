@@ -33,17 +33,17 @@ jobs:
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
-      - name: 📦 Run EAS Build - iOS
-        run: eas build --platform ios --profile production --clear-cache
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      # - name: 📦 Run EAS Build - iOS
+      #   run: eas build --platform ios --profile production --clear-cache
+      #   env:
+      #     EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🚀 Submit Android to Play Store
         run: eas submit -p android --profile production --clear-cache
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
-      - name: 🚀 Submit iOS to TestFlight
-        run: eas submit -p ios --profile production --clear-cache
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      # - name: 🚀 Submit iOS to TestFlight
+      #   run: eas submit -p ios --profile production --clear-cache
+      #   env:
+      #     EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}

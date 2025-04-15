@@ -1,6 +1,7 @@
 {
     "cli": {
-      "version": ">=3.0.0"
+      "version": ">=3.0.0",
+      "appVersionSource": "remote"
     },
     "build": {
       "preview": {
@@ -20,6 +21,12 @@
           "buildConfiguration": "Release"
         }
       }
+    },
+    "submit": {
+      "production": {
+        "android": {
+          "serviceAccountKeyPath": "./keys/play-store.json"
+        }
+      }
     }
   }
-  
