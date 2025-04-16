@@ -21,12 +21,5 @@
           "buildConfiguration": "Release"
         }
       }
-    },
-    "submit": {
-      "production": {
-        "android": {
-          "serviceAccountKeyPath": "./keys/play-store.json"
-        }
-      }
     }
   }
